@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<<head>
+<head>
 	<meta charset="utf-8">
 	<title>JQ-lesson</title>
-	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 	<table>
@@ -21,12 +21,72 @@
 				<td style="padding: 1em;">金</td>
 				<td style="padding: 1em;">土</td>
 			</tr>
+
+			<tr class="days">
+				<td style="padding: 1em;">1</td>
+				<td style="padding: 1em;">2</td>
+				<td style="padding: 1em;">3</td>
+				<td style="padding: 1em;">4</td>
+				<td style="padding: 1em;">5</td>
+				<td style="padding: 1em;">6</td>
+				<td style="padding: 1em;">7</td>
+			</tr>
+
+			<tr class="days">
+				<td style="padding: 1em;">8</td>
+				<td style="padding: 1em;">9</td>
+				<td style="padding: 1em;">10</td>
+				<td style="padding: 1em;">11</td>
+				<td style="padding: 1em;">12</td>
+				<td style="padding: 1em;">13</td>
+				<td style="padding: 1em;">14</td>
+			</tr>
+
+			<tr class="days">
+				<td style="padding: 1em;">15</td>
+				<td style="padding: 1em;">16</td>
+				<td style="padding: 1em;">17</td>
+				<td style="padding: 1em;">18</td>
+				<td style="padding: 1em;">19</td>
+				<td style="padding: 1em;">20</td>
+				<td style="padding: 1em;">21</td>
+			</tr>
+
+			<tr class="days">
+				<td style="padding: 1em;">22</td>
+				<td style="padding: 1em;">23</td>
+				<td style="padding: 1em;">24</td>
+				<td style="padding: 1em;">25</td>
+				<td style="padding: 1em;">26</td>
+				<td style="padding: 1em;">27</td>
+				<td style="padding: 1em;">28</td>
+			</tr>
+
+			<tr class="days">
+				<td style="padding: 1em;">29</td>
+				<td style="padding: 1em;">30</td>
+				<td style="padding: 1em;">31</td>
+				<td class="blankday"></td>
+				<td class="blankday"></td>
+				<td class="blankday"></td>
+				<td class="blankday"></td>
+			</tr>
 	</table>
 </body>
 
 <script>
-	$(fanction(){
+	$(function(){
+		// $(".week td:eq()").css("color","red");
+		// $(".week td:eq(6)").css("color","blue");
 
+		$(function(){
+			$("td:eq(7),td:eq(14),td:eq(21),td:eq(28),td:eq(35)").css("color","red");
+			$("td:eq(13),td:eq(20),td:eq(27),td:eq(34)").css("color","blue");
+
+			$(".week > td:first").css("color","red");
+			$(".week > td:last").css("color","blue");
+
+		});
 	});
 </script>
 
